@@ -47,7 +47,7 @@ static int[] list; //array containing the random numbers.
 	public static void main (String[] args)
 	{
             Cases(20000, 300, 1); //Best Case (200000 max amount of n integers, 300 repetitions).
-            Cases(5000, 300, 2); //Average Case (5000 max amount of n integers, 300 repetitions). If n is bigger, elapsed time will overflow the variable.
+            Cases(20000, 300, 2); //Average Case (5000 max amount of n integers, 300 repetitions). If n is bigger, elapsed time will overflow the variable.
             Cases(5000, 300, 3); //Worst Case (5000 max amount of n integers, 300 repetitions).
 	}
 
@@ -58,7 +58,7 @@ static int[] list; //array containing the random numbers.
                 is = new LinkedList<Integer>();
                 comparisons = new LinkedList<Integer>(); //We initialize all 3 lists.
                 int factor;
-                if(opti == 1){
+                if(opti == 1 || opti == 2){
                     factor = 6;
                 } else {
                     factor = 5; //i grows times 3/2 (1.5) instead of 2 in order to get more data in worst and average case.
